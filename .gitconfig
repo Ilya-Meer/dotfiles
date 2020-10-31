@@ -1,0 +1,31 @@
+[user]
+	name = Ilya Meerovich
+	email = ilya.meerov@gmail.com
+
+[credential]
+	helper = osxkeychain
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+
+[core]
+	editor = vim
+
+[alias]
+	sync = !git reset --hard origin/$(git branch --show-current)
+
+	# Interactive rebase with specified number of commits
+	reb = "!r() { git rebase -i HEAD~$1; }; r"
+
+	# Show last commit
+	last = "!git --no-pager log -1 --color"
+
+	# List aliases.
+ 	aliases = config --get-regexp alias
+
+[branch]
+	# Show most recently changed branches first.
+	sort = -committerdate

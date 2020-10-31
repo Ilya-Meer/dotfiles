@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+
+# Conf files
+alias gitconf="v ~/.gitconfig"
+alias zshconf="v ~/.zshrc"
+alias vimconf="v ~/.vim/.vimrc"
+
+# Reload zsh config
+alias reload="source ~/.zshrc"
+
+# Use brew installed universal ctags
+alias ctags="/usr/local/bin/ctags"
+
+# Shortcuts
+alias dl="cd ~/Downloads"
+alias dt="cd ~/Desktop"
+alias dm="cd ~/Documents"
+
+#########
+# General
+#########
+
+# Open Time Log in VS Code
+alias t="code ~/Documents/Notes/Time.md"
+
+alias android="open -a 'Android Studio'"
+alias ios="open -a xcode ."
+
+alias hs="history"
+alias v="vim"
+
+# Show path segments
+alias path="tr ':' '\n' <<< '$PATH'"
