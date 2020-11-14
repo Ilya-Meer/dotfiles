@@ -73,9 +73,14 @@ syntax enable
 " Line numbers
 set relativenumber number
 
-" Color scheme
-colorscheme dracula
-highlight Normal ctermbg=234
+" Tab width
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
+
+" Search
+set incsearch
+set hlsearch
 
 " Split pane navigation
 map <C-h> <C-w>h
@@ -83,5 +88,7 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
-" Tab width
-set tabstop=2
+" Color scheme
+colorscheme dracula
+highlight Normal ctermbg=235
+
