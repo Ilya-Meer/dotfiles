@@ -1,3 +1,7 @@
+# FZF
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -l -g ""' 
+
 # Tmux
 export TERM="screen-256color-bce"
 
@@ -13,6 +17,9 @@ source $HOME/Documents/Projects/dotfiles/.functions
 # RBEnv
 export PATH="$HOME/.rbenv/bin:/usr/local/bin:$PATH"
 eval "$(rbenv init -)"
+
+# User installed gems
+export PATH="$PATH:$HOME/.gem/ruby/2.6.0/bin"
 
 # Go Path
 export GOPATH=$(go env GOPATH)

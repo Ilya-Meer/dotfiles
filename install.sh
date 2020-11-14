@@ -10,6 +10,9 @@ brew update
 brew install node
 brew install rbenv
 
+brew install ag
+brew install ack
+brew install fzf
 brew install gh
 brew install tmux
 brew install tree

@@ -9,18 +9,20 @@ call plug#begin('~/.vim/plugged')
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'preservim/nerdtree'
-Plug 'ctrlpvim/ctrlp.vim'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'leafgarland/typescript-vim'
 Plug 'pangloss/vim-javascript'
+Plug 'mileszs/ack.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install()  }  }
+Plug 'junegunn/fzf.vim'
 call plug#end()
 
 " Nerdtree
 map <C-n> :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
 
-" Show hidden files when using Ctrl-P
-let g:ctrlp_show_hidden = 1
+" FZF
+nnoremap <silent> <C-p> :Files<Cr>
 
 " Enable syntax highlighting
 syntax enable 
