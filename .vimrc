@@ -15,6 +15,7 @@ Plug 'pangloss/vim-javascript'
 Plug 'mileszs/ack.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install()  }  }
 Plug 'junegunn/fzf.vim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
 " Nerdtree
@@ -24,6 +25,15 @@ let NERDTreeShowHidden=1
 " FZF
 nnoremap <silent> <C-p> :Files<Cr>
 
+" CoC Extensions
+let g:coc_global_extensions = [
+	\ 'coc-tsserver',
+	\ 'coc-solargraph',
+	\ 'coc-snippets',
+	\ 'coc-prettier',
+	\ 'coc-json', 
+	\ 'coc-git',
+	\	]
 " Enable syntax highlighting
 syntax enable 
 
