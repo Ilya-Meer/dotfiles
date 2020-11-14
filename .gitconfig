@@ -16,6 +16,7 @@
 	excludesFile = ~/.gitignore
 
 [alias]
+	# Reset to origin
 	sync = !git reset --hard origin/$(git branch --show-current)
 
 	# Interactive rebase with specified number of commits
@@ -23,10 +24,12 @@
 
 	# Show last commit
 	last = "!git --no-pager log -1 --color"
+	
+	# Add staged changes to last commit
+	amend = "!git commit --amend --no-edit"
 
 	# List aliases.
  	aliases = config --get-regexp alias
-
 [branch]
 	# Show most recently changed branches first.
 	sort = -committerdate
