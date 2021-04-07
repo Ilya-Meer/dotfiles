@@ -28,6 +28,9 @@
 	# Add staged changes to last commit
 	amend = "!git commit --amend --no-edit"
 
+	# Make dummy commit
+  save = !git add -A && git commit -m 'WIP' --no-verify
+
 	# List aliases.
  	aliases = config --get-regexp alias
 [branch]
