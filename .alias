@@ -31,3 +31,9 @@ alias v="vim"
 
 # Show path segments
 alias path="tr ':' '\n' <<< '$PATH'"
+
+# Weather
+alias weather="curl wttr.in"
+
+# Moon phase
+alias moon="curl wttr.in/Moon"
