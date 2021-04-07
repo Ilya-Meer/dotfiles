@@ -14,6 +14,7 @@ brew install ag
 brew install ack
 brew install fzf
 brew install gh
+brew install jq
 brew install tmux
 brew install tree
 brew install yarn
