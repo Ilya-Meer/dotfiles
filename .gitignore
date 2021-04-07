@@ -2,6 +2,6 @@
 tags
 
 # Vim
-.swp
+*.swp
 
 node_modules
