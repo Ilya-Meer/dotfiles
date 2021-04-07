@@ -1,26 +1,48 @@
+" Leader
+let mapleader = ","
+
+" Remap Escape
+inoremap jh <Esc>
+
 " Install vim-plug if not found
 if empty(glob('~/.vim/autoload/plug.vim'))
 	silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
  \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 endif
 
+" Source Vim configuration file and install plugins
+nnoremap <silent><leader>1 :source ~/.vim/.vimrc \| :PlugInstall<CR>
+
 " Plugins
-call plug#begin('~/.vim/plugged')
+ call plug#begin('~/.vim/plugged')
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'preservim/nerdtree'
-Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'crusoexia/vim-dracula'
 Plug 'leafgarland/typescript-vim'
 Plug 'pangloss/vim-javascript'
+Plug 'keith/swift.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'alvan/vim-closetag'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
+Plug 'airblade/vim-gitgutter'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'mileszs/ack.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install()  }  }
 Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'joshdick/onedark.vim'
+
+" Vim Markdown
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
+
+" Snippets
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'tomtom/tlib_vim'
+Plug 'garbas/vim-snipmate'
+
 call plug#end()
 
 " Nerdtree
@@ -35,10 +57,12 @@ let g:coc_global_extensions = [
 	\ 'coc-tsserver',
 	\ 'coc-solargraph',
 	\ 'coc-snippets',
-	\ 'coc-prettier',
 	\ 'coc-json', 
 	\ 'coc-git',
 	\	]
+
+" Show tooltip with function signature
+nnoremap <silent> K :call CocAction('doHover')<CR>
 
 " Tags
 let g:gutentags_add_default_project_roots = 0
@@ -67,6 +91,12 @@ let g:gutentags_ctags_exclude = [
       \ '*build*.js',
       \ ]
 
+" set filetypes as typescriptreact
+autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact
+
+" Vim git gutter update time
+set updatetime=100
+
 " Enable syntax highlighting
 syntax enable 
 
@@ -74,6 +104,7 @@ syntax enable
 set relativenumber number
 
 " Tab width
+set expandtab
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
@@ -81,6 +112,15 @@ set shiftwidth=2
 " Search
 set incsearch
 set hlsearch
+set shortmess-=S
+noremap <leader>a  :Ag! <C-r>=expand('<cword>')<CR><CR>
+
+" Set wildmenu
+set wildmenu
+set wildmode=longest,list,full
+
+" Backspace
+set backspace=indent,eol,start
 
 " Split pane navigation
 map <C-h> <C-w>h
@@ -91,4 +131,5 @@ map <C-l> <C-w>l
 " Color scheme
 colorscheme dracula
 highlight Normal ctermbg=235
+highlight LineNr ctermfg=32
 
