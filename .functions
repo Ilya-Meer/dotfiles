@@ -45,6 +45,10 @@ function co() {
     done
 }
 
+function vv() {
+	vim -o `fzf`
+}
+
 # Run appium server
 function appium-server() {
 	cd /usr/local/lib/node_modules/appium/node_modules/appium-webdriveragent && \
