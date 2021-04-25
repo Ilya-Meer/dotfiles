@@ -67,6 +67,9 @@ nnoremap <silent> K :call CocAction('doHover')<CR>
 " Snippet settings 
 let g:snipMate = { 'snippet_version' : 1  }
 
+" Vim markdown settings
+let g:vim_markdown_folding_disabled = 1
+
 " Tags
 let g:gutentags_add_default_project_roots = 0
 let g:gutentags_project_root = ['package.json', '.git']
@@ -136,3 +139,21 @@ colorscheme dracula
 highlight Normal ctermbg=235
 highlight LineNr ctermfg=32
 
+" Set colors for markdown
+function! MarkdownColours()
+ highlight mkdHeading ctermfg=141
+ highlight htmlH1 ctermfg=141
+ highlight htmlH2 ctermfg=141
+ highlight htmlH3 ctermfg=141
+ highlight htmlH4 ctermfg=141
+ highlight htmlH5 ctermfg=141
+ highlight htmlH6 ctermfg=141
+ highlight mkdLink ctermfg=212
+ highlight mkdURL ctermfg=117
+ highlight mkdCodeDelimiter ctermfg=84
+ highlight mkdCodeStart ctermfg=84
+ highlight mkdCodeEnd ctermfg=84
+ highlight mkdBlockquote ctermfg=228
+endfunction
+
+autocmd BufNewFile,BufRead *.md call MarkdownColours() 
