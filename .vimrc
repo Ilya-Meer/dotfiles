@@ -139,6 +139,20 @@ colorscheme dracula
 highlight Normal ctermbg=235
 highlight LineNr ctermfg=32
 
+" Retrieve token for highlight modification
+function! GetSyntaxID()
+  return synID(line('.'), col('.'), 1)
+endfunction
+
+function! GetSyntaxParentID()
+  return synIDtrans(GetSyntaxID())
+endfunction
+
+function! GetSyntax()
+  echo synIDattr(GetSyntaxID(), 'name')
+  exec "hi ".synIDattr(GetSyntaxParentID(), 'name')
+endfunction
+
 " Set colors for markdown
 function! MarkdownColours()
  highlight mkdHeading ctermfg=141
