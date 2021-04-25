@@ -64,6 +64,9 @@ let g:coc_global_extensions = [
 " Show tooltip with function signature
 nnoremap <silent> K :call CocAction('doHover')<CR>
 
+" Snippet settings 
+let g:snipMate = { 'snippet_version' : 1  }
+
 " Tags
 let g:gutentags_add_default_project_roots = 0
 let g:gutentags_project_root = ['package.json', '.git']
