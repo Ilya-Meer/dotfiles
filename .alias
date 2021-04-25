@@ -37,3 +37,9 @@ alias weather="curl wttr.in"
 
 # Moon phase
 alias moon="curl wttr.in/Moon"
+
+# Git add with fzf multi-select
+alias fa="git ls-files -m -o --exclude-standard | fzf --print0 -m | xargs -0 -t -o git add"
+
+# General purpose fzf to xargs
+alias fx="fzf -m | xargs -t" 
