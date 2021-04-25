@@ -45,8 +45,14 @@ function co() {
     done
 }
 
+# Open output of fzf in vim buffer
 function vv() {
 	vim -o `fzf`
+}
+
+# Create new zettel with date id
+function zl() {
+  touch $(zd)-$1.md
 }
 
 # Run appium server

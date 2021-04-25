@@ -43,3 +43,6 @@ alias fa="git ls-files -m -o --exclude-standard | fzf --print0 -m | xargs -0 -t 
 
 # General purpose fzf to xargs
 alias fx="fzf -m | xargs -t" 
+
+# Zettelkasten date
+alias zd="date +%Y%m%d%H%M%S"
