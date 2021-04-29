@@ -33,6 +33,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install()  }  }
 Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'joshdick/onedark.vim'
+Plug 'junegunn/goyo.vim'
 
 " Vim Markdown
 Plug 'godlygeek/tabular'
