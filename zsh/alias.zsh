@@ -4,6 +4,7 @@
 alias gitconf="v ~/.gitconfig"
 alias zshconf="v ~/.zshrc"
 alias vimconf="v ~/.vim/.vimrc"
+alias tmuxconf="v ~/.tmux.conf"
 
 # Reload zsh config
 alias reload="source ~/.zshrc"
