@@ -16,6 +16,7 @@ brew install fzf
 brew install gh
 brew install jq
 brew install tmux
+brew install stow
 brew install tree
 brew install yarn
 brew install --HEAD universal-ctags/universal-ctags/universal-ctags

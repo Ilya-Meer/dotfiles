@@ -31,6 +31,9 @@
 	# Make dummy commit
   save = !git add -A && git commit -m 'WIP' --no-verify
 
+  # Use fzf to add files
+  fza = "!git ls-files -m -o --exclude-standard | fzf --print0 -m | xargs -0 -t -o git add" 
+  
 	# List aliases.
  	aliases = config --get-regexp alias
 [branch]

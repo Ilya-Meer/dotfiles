@@ -1,0 +1,7 @@
+{ 
+   // "coc.preferences.formatOnSaveFiletypes": ["javascript", "typescript"],
+	"diagnostic.checkCurrentLine": true,
+  "signature.preferShownAbove": true,
+  "git.enableGutters": false,
+	"coc.preferences.noselect": false
+}

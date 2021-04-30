@@ -11,8 +11,8 @@ export MYVIMRC='~/.vim/.vimrc'
  
 # Source Dotfiles
 
-source $HOME/Documents/Projects/dotfiles/.alias
-source $HOME/Documents/Projects/dotfiles/.functions
+source $HOME/alias.zsh
+source $HOME/functions.zsh
 
 # RBEnv
 export PATH="$HOME/.rbenv/bin:/usr/local/bin:$PATH"
@@ -24,6 +24,15 @@ export PATH="$PATH:$HOME/.gem/ruby/2.6.0/bin"
 # Go Path
 export GOPATH=$(go env GOPATH)
 export PATH="$PATH:$(go env GOPATH):$(go env GOPATH)/bin"
+
+# NVM
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Java
+export ANDROID_HOME="/Users/ilyameerovich/Library/Android/sdk"
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home"
 
 # Disable completion in insecure directories
 ZSH_DISABLE_COMPFIX="true"
