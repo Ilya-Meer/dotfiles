@@ -47,3 +47,6 @@ alias fx="fzf -m | xargs -t"
 
 # Zettelkasten date
 alias zd="date +%Y%m%d%H%M%S"
+
+# Log date
+alias logd="echo \*\*$(date +%a\ %B\ %d,\ %Y\ -\ %H:%M:%S)\*\*"
