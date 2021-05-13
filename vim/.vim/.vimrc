@@ -155,6 +155,18 @@ function! GetSyntax()
   exec "hi ".synIDattr(GetSyntaxParentID(), 'name')
 endfunction
 
+" Insert timestamp for log
+function! Logd()
+  put =strftime('**%a %B %d, %Y - %H:%M:%S**')
+  call append(line("."), "")
+  call append(line("."), "")
+  execute "norm 2j"
+  startinsert
+endfunction
+
+" Associated command for Logd function
+command! Logd call Logd() 
+
 " Set colors for markdown
 function! MarkdownColours()
  highlight mkdHeading ctermfg=141
@@ -164,6 +176,8 @@ function! MarkdownColours()
  highlight htmlH4 ctermfg=141
  highlight htmlH5 ctermfg=141
  highlight htmlH6 ctermfg=141
+ highlight htmlBold ctermfg=215
+ highlight mkdBold ctermfg=215
  highlight mkdLink ctermfg=212
  highlight mkdURL ctermfg=117
  highlight mkdCodeDelimiter ctermfg=84
