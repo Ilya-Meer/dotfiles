@@ -34,6 +34,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'joshdick/onedark.vim'
 Plug 'junegunn/goyo.vim'
+Plug 'psliwka/vim-smoothie'
 
 " Vim Markdown
 Plug 'godlygeek/tabular'
