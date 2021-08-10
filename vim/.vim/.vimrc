@@ -2,7 +2,7 @@
 let mapleader = ","
 
 " Remap Escape
-inoremap jh <Esc>
+inoremap jk <Esc>
 
 " Install vim-plug if not found
 if empty(glob('~/.vim/autoload/plug.vim'))
