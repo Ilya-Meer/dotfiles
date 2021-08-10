@@ -60,3 +60,8 @@ plugins=(git z rails ruby rake zsh-vi-mode)
 source $ZSH/oh-my-zsh.sh
 
 ZVM_CURSOR_STYLE_ENABLED=false
+
+# Use vim bindings for history command substring search
+bindkey -M vicmd 'k' history-beginning-search-backward
+bindkey -M vicmd 'j' history-beginning-search-forward
+
