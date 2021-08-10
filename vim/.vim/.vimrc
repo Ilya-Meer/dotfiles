@@ -35,6 +35,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'joshdick/onedark.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'psliwka/vim-smoothie'
+Plug 'mattn/emmet-vim'
 
 " Vim Markdown
 Plug 'godlygeek/tabular'
@@ -61,6 +62,7 @@ let g:coc_global_extensions = [
 	\ 'coc-snippets',
 	\ 'coc-json', 
 	\ 'coc-git',
+	\ 'coc-css',
 	\	]
 
 " Show tooltip with function signature
