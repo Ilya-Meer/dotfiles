@@ -22,12 +22,14 @@ Plug 'crusoexia/vim-dracula'
 Plug 'leafgarland/typescript-vim'
 Plug 'pangloss/vim-javascript'
 Plug 'fatih/vim-go'
+Plug 'evanleck/vim-svelte'
 Plug 'keith/swift.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'alvan/vim-closetag'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'mileszs/ack.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install()  }  }
@@ -37,6 +39,10 @@ Plug 'joshdick/onedark.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'psliwka/vim-smoothie'
 Plug 'mattn/emmet-vim'
+"""
+Plug 'MaxMEllon/vim-jsx-pretty'
+Plug 'styled-components/vim-styled-components', { 'branch': 'main'  }
+Plug 'jparise/vim-graphql'
 
 " Vim Markdown
 Plug 'godlygeek/tabular'
@@ -56,14 +62,21 @@ let NERDTreeShowHidden=1
 " FZF
 nnoremap <silent> <C-p> :Files<Cr>
 
+" Access man pages
+runtime ftplugin/man.vim
+
 " CoC Extensions
 let g:coc_global_extensions = [
 	\ 'coc-tsserver',
+	\ 'coc-go',
 	\ 'coc-solargraph',
 	\ 'coc-snippets',
 	\ 'coc-json', 
 	\ 'coc-git',
 	\ 'coc-css',
+	\ 'coc-eslint',
+	\ 'coc-prettier',
+	\ 'coc-svelte',
 	\	]
 
 " Show tooltip with function signature
@@ -74,6 +87,9 @@ let g:snipMate = { 'snippet_version' : 1  }
 
 " Vim markdown settings
 let g:vim_markdown_folding_disabled = 1
+
+" Svelte
+let g:svelte_preprocessors = ['typescript']
 
 " Tags
 let g:gutentags_add_default_project_roots = 0
@@ -111,7 +127,10 @@ set updatetime=100
 " Enable syntax highlighting
 syntax enable 
 
-" Line numbers
+" Set mouse
+set mouse=a
+
+"Line numbers
 set relativenumber number
 
 " Tab width
@@ -132,6 +151,9 @@ set wildmode=longest,list,full
 
 " Backspace
 set backspace=indent,eol,start
+
+" Copy to system clipboard
+vnoremap <leader>c "*y
 
 " Split pane navigation
 map <C-h> <C-w>h
