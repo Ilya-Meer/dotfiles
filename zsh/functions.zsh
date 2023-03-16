@@ -15,6 +15,16 @@ function serve() {
 
 # Check out branch utility
 function co() {
+    if [ $# -eq 0 ]
+    then
+        cat << EOF
+Usage: co <pattern>
+
+Example: co 123 (will search for branches with 123 in the name)
+EOF
+    return
+    fi
+
     OPTIONS=()
 
     # Push all local branch names into array
