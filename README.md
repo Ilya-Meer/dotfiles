@@ -4,12 +4,38 @@ Various configs - variously imagined and variously pilfered.
 
 - Zshell
 - Git
-- Vim
+- Neovim
 - Tmux
 - Basic program installation
 
 ```
 .
+├── .config
+│   └── .config
+│       └── nvim
+│           ├── init.lua
+│           ├── lua
+│           │   └── user
+│           │       ├── cmp.lua
+│           │       ├── colorscheme.lua
+│           │       ├── custom.lua
+│           │       ├── go
+│           │       │   └── init.lua
+│           │       ├── keymaps.lua
+│           │       ├── lsp
+│           │       │   ├── handlers.lua
+│           │       │   ├── init.lua
+│           │       │   ├── mason.lua
+│           │       │   ├── null-ls.lua
+│           │       │   └── settings
+│           │       │       └── sumneko_lua.lua
+│           │       ├── options.lua
+│           │       ├── plugins.lua
+│           │       ├── symbols-outline.lua
+│           │       └── telescope.lua
+│           └── plugin
+│               └── packer_compiled.lua
+├── .gitignore
 ├── README.md
 ├── git
 │   ├── .gitconfig
@@ -18,21 +44,9 @@ Various configs - variously imagined and variously pilfered.
 ├── install.sh
 ├── tmux
 │   └── .tmux.conf
-├── vim
-│   └── .vim
-│       ├── .vimrc
-│       ├── coc-settings.json
-│       └── snippets
-│           ├── html.snippets
-│           ├── javascript.snippets
-│           ├── markdown.snippets
-│           ├── typescript.snippets
-│           └── typescriptreact.snippets
 └── zsh
     ├── .zshrc
     ├── alias.zsh
     └── functions.zsh
 ```
 
-
-Inspired by [Mathias's dotfiles](https://github.com/mathiasbynens/dotfiles).
