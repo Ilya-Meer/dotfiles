@@ -3,7 +3,7 @@
 # Conf files
 alias gitconf="v ~/.gitconfig"
 alias zshconf="v ~/.zshrc"
-alias vimconf="v ~/.vim/.vimrc"
+alias vimconf="v ~/.config/nvim/init.lua"
 alias tmuxconf="v ~/.tmux.conf"
 
 # Reload zsh config
@@ -28,7 +28,7 @@ alias android="open -a 'Android Studio'"
 alias ios="open -a xcode ."
 
 alias hs="history"
-alias v="vim"
+alias v="nvim"
 
 # Show path segments
 alias path="tr ':' '\n' <<< '$PATH'"

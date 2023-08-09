@@ -57,7 +57,7 @@ EOF
 
 # Open output of fzf in vim buffer
 function vv() {
-	vim -o `fzf`
+	nvim -o `fzf`
 }
 
 # Create new zettel with date id

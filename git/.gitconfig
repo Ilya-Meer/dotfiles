@@ -12,7 +12,7 @@
 	required = true
 
 [core]
-	editor = vim
+	editor = nvim
 	excludesFile = ~/.gitignore
 
 [alias]

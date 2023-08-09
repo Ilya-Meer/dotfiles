@@ -7,7 +7,7 @@ export TERM="screen-256color-bce"
 
 # Set path to .vimrc
 export VIMINIT='source $MYVIMRC'
-export MYVIMRC='~/.vim/.vimrc'
+export MYVIMRC='~/.config/nvim/init.lua'
  
 # Source Dotfiles
 

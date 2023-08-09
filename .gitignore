@@ -1,2 +1,2 @@
-# Vim plugins
-vim/.vim/plugged
+# Neovim plugins
+.config/.config/nvim/plugin/packer_compiled.lua
