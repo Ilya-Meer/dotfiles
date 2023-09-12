@@ -25,6 +25,9 @@ export PATH="$PATH:$HOME/.gem/ruby/2.6.0/bin"
 export GOPATH=$(go env GOPATH)
 export PATH="$PATH:$(go env GOPATH):$(go env GOPATH)/bin"
 
+# Rust
+source $HOME/.cargo/env
+
 # NVM
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

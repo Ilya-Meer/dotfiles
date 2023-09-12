@@ -64,7 +64,7 @@ return packer.startup(function(use)
   -- NerdTree
     use {"preservim/nerdtree"}
 
-  -- Markdown 
+  -- Markdown
     use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
     use { "godlygeek/tabular" }
     use { "preservim/vim-markdown" }
@@ -73,7 +73,7 @@ return packer.startup(function(use)
     use { "folke/tokyonight.nvim", commit = "66bfc2e8f754869c7b651f3f47a2ee56ae557764" }
     use { "lunarvim/darkplus.nvim", commit = "13ef9daad28d3cf6c5e793acfc16ddbf456e1c83" }
 
-	-- Cmp 
+	-- Cmp
     use { "hrsh7th/nvim-cmp", commit = "b0dff0ec4f2748626aae13f011d1a47071fe9abc" } -- The completion plugin
     use { "hrsh7th/cmp-buffer", commit = "3022dbc9166796b644a841a02de8dd1cc1d311fa" } -- buffer completions
     use { "hrsh7th/cmp-path", commit = "447c87cdd6e6d6a1d2488b1d43108bfa217f56e1" } -- path completions
@@ -118,6 +118,12 @@ return packer.startup(function(use)
     -- Go
     -- use { 'ray-x/go.nvim', config = function() require("go").setup {} end } -- better than fatih/vim-go?
     use { "fatih/vim-go" }
+
+    -- Rust
+    use { 'simrat39/rust-tools.nvim' }
+    use { 'rust-lang/rust.vim' }
+    use { 'mfussenegger/nvim-dap' }
+    use { 'rcarriga/nvim-dap-ui' }
 
     -- Coffeescript
     use { 'kchmck/vim-coffee-script' }

@@ -11,7 +11,8 @@ local servers = {
     "html",
     "tsserver",
     "eslint",
-    "volar"
+    "volar",
+    "rust_analyzer",
 }
 
 local settings = {
