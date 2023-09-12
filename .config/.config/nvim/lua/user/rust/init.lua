@@ -1,4 +1,10 @@
 local rt = require("rust-tools")
+local mason_registry = require("mason-registry")
+
+local codelldb = mason_registry.get_package("codelldb")
+local extension_path = codelldb:get_install_path() .. "/extension/"
+local codelldb_path = extension_path .. "adapter/codelldb"
+local liblldb_path = extension_path .. "lldb/lib/liblldb.dylib"
 
 local function on_attach(client, buffer)
   local keymap_opts = { buffer = buffer }
@@ -40,7 +46,9 @@ local opts = {
       other_hints_prefix = "",
     },
   },
-
+  dap = {
+    adapter = require("rust-tools.dap").get_codelldb_adapter(codelldb_path, liblldb_path),
+  },
   server = {
     capabilities = require("cmp_nvim_lsp").default_capabilities(),
     on_attach = on_attach,

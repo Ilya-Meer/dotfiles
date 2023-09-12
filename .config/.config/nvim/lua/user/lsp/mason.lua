@@ -13,6 +13,7 @@ local servers = {
     "eslint",
     "volar",
     "rust_analyzer",
+    -- "codelldb" (install via :Mason)
 }
 
 local settings = {
