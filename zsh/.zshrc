@@ -1,6 +1,7 @@
 # FZF
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -l -g ""' 
+export FZF_DEFAULT_OPTS='--color=fg:#ffffff,hl:#ffcc00,bg+:#bf72ff,hl+:#2d52a4,gutter:-1'
 
 # Tmux
 export TERM="screen-256color-bce"
