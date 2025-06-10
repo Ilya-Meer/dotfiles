@@ -10,16 +10,9 @@ export VIMINIT='source $MYVIMRC'
 export MYVIMRC='~/.config/nvim/init.lua'
  
 # Source Dotfiles
-
 source $HOME/alias.zsh
 source $HOME/functions.zsh
 
-# RBEnv
-export PATH="$HOME/.rbenv/bin:/usr/local/bin:$PATH"
-eval "$(rbenv init -)"
-
-# User installed gems
-export PATH="$PATH:$HOME/.gem/ruby/2.6.0/bin"
 
 # Go Path
 export GOPATH=$(go env GOPATH)
