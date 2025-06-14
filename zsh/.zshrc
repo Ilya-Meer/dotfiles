@@ -14,6 +14,12 @@ export MYVIMRC='~/.config/nvim/init.lua'
 source $HOME/alias.zsh
 source $HOME/functions.zsh
 
+# RBEnv
+# export PATH="$HOME/.rbenv/bin:/usr/local/bin:$PATH"
+# eval "$(rbenv init -)"
+
+# User installed gems
+export PATH="$PATH:$HOME/.gem/ruby/2.6.0/bin"
 
 # Go Path
 export GOPATH=$(go env GOPATH)
@@ -26,10 +32,6 @@ source $HOME/.cargo/env
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# Java
-export ANDROID_HOME="/Users/ilyameerovich/Library/Android/sdk"
-export JAVA_HOME="/Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home"
 
 # Disable completion in insecure directories
 ZSH_DISABLE_COMPFIX="true"

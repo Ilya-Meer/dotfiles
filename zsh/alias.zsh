@@ -53,5 +53,4 @@ alias zd="date +%Y%m%d%H%M%S"
 alias logd="echo \*\*$(date +%a\ %B\ %d,\ %Y\ -\ %H:%M:%S)\*\*"
 
 alias dft="GIT_EXTERNAL_DIFF=difft git diff"
-alias scr="cat package.json | gron | grep scripts | gron -u"
-
+alias scr="gron package.json | grep scripts | gron -u"
