@@ -28,14 +28,18 @@ local options = {
   number = true,                           -- set numbered lines
   relativenumber = true,                   -- set relative numbered lines
   numberwidth = 4,                         -- set number column width to 2 {default 4}
-  
-  signcolumn = "yes",                      --  todo: revisit this --> always show the sign column, otherwise it would shift the text each time
+  signcolumn = "yes",                      -- todo: revisit this --> always show the sign column, otherwise it would shift the text each time
   wrap = true,                             -- display lines as one long line
   linebreak = true,                        -- companion to wrap, don't split words
-  scrolloff = 8,                           -- minimal number of screen lines to keep above and below the cursor
   sidescrolloff = 8,                       -- minimal number of screen columns either side of cursor if wrap is `false`
   guifont = "monospace:h17",               -- the font used in graphical neovim applications
   whichwrap = "bs<>[]hl",                  -- which "horizontal" keys are allowed to travel to prev/next line
+  scrolloff = 999,                         -- how many lines to keep above and below the cursor
+  inccommand  = "split",                   -- preview incremental substitute
+  virtualedit = "block",                   -- allow cursor to move where there is no text
+  foldenable = false,                      -- disable folding by default
+  winborder = "single",                    -- set single borders on all floating windows (since I can't seem to get this working via LSP commands)
+  spell = true                             -- turn on spellcheck
 }
 
 for k, v in pairs(options) do

@@ -1,2 +1,1 @@
-# Neovim plugins
-.config/.config/nvim/plugin/packer_compiled.lua
+nvim/.config/nvim/spell/
