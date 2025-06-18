@@ -1,0 +1,19 @@
+layout {
+    pane size=1 split_direction="vertical" {
+        pane size="75%" borderless=true {
+            plugin location="zellij:tab-bar"
+        }
+        pane size="25%" borderless=true {
+            plugin location="file:/Users/ilyameerovich/.config/zellij/plugins/zellij-datetime.wasm" {
+              timezone1 "PDT/-7"
+                default_timezone "PDT"
+                pane_color "#383E5A"
+              background_color "#9d7cd8"
+            }
+        }
+    }
+    pane
+    pane size=1 borderless=true {
+        plugin location="zellij:status-bar"
+    }
+}
