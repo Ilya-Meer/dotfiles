@@ -51,7 +51,7 @@ keymap("n", "<leader>a", ":Telescope grep_string <CR>", opts)
 keymap("n", ";", ":Telescope buffers <CR>", opts)
 
 -- Toggle Outline plugin
-keymap("n", "<leader>s", ":OutlineOpen <CR>", opts)
+keymap("n", "<leader>s", ":Outline <CR>", opts)
 
 -- Gitsigns
 keymap("n", "[c", ":Gitsigns prev_hunk <CR>", { noremap = true, silent = true })
