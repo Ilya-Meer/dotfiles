@@ -18,7 +18,7 @@ return {
       pattern = "GoyoLeave",
       callback = function()
         vim.wo.signcolumn = "yes"
-       vim.o.laststatus = 2
+        vim.o.laststatus = 2
         pcall(function()
           require("lualine").hide({ unhide = true }) -- restore lualine
         end)
